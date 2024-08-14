@@ -1,7 +1,8 @@
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
-
+CORS(app)  # Allow cross-origin requests
 @app.route('/')
 def index():
     return "Flask server is running"
